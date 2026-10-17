@@ -4,6 +4,10 @@ public class EmprestimoService()
 {
     public decimal CalcularValorParcela(decimal valorTotal, int parcelas, int scoreCredito)
     {
+        if (parcelas <= 0)
+        {
+            return 0m;
+        }
         decimal valorComJuros;
 
         if (scoreCredito >= 700)
